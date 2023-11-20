@@ -17,6 +17,7 @@ function Header({pageTitle}) {
           <li>
             <Link to="/products">Products</Link>
           </li>
+         
         </ul>
       </nav>
     </header>

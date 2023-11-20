@@ -1,6 +1,10 @@
+
+
 import { useParams } from "react-router-dom";
 import Header from "../component/Header";
 import { products } from "../utils/products-utils";
+import SideBar from "../component/SideBar";
+
 function ProductPage() {
 
   // on utilise useparam afin de récupérer la valeur id dans l'url et afficher l'élément corespondant du tableau
@@ -23,7 +27,8 @@ function ProductPage() {
   return (
     <>
     {/* j'ajoute au header la valeur de mon titre */}
-      <Header pageTitle= "ProductPage" />
+      <Header pageTitle= "Product Page" />
+      <SideBar sidebar= {productFound.title} />
       <main>
         {productFound ? (
           <article>

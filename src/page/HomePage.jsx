@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Header from "../component/Header";
 import { productSortedByPrice, products } from "../utils/products-utils";
+import SideBar from "../component/SideBar";
 
 function Home() {
  
@@ -23,16 +24,17 @@ function Home() {
 
   // on recommence en rangeant les produits par prix avec sort pour comparer les éléments du tableau
 
-  const productSortedByPrice = products.sort((product1, product2) => product1.price - product2.price);
+  
 
   // cette fois ci on se sert de slice afin de prendre les trois premiers produits
   const cheapestProducts = productSortedByPrice.slice(0, 3);
 
   return (
     <>
-
+      
     {/* j'ajoute au header la valeur de mon titre */}
       <Header pageTitle="HomePage"/>
+      <SideBar sidebar= "Titre de la home page" />
       <main>
         <section>
           <h2>Les trois derniers produits cuisine : </h2>
@@ -69,6 +71,7 @@ function Home() {
             );
           })}
         </section>
+        
       </main>
     </>
   );
