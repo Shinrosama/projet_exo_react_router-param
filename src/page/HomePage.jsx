@@ -30,7 +30,9 @@ function Home() {
 
   return (
     <>
-      <Header />
+
+    {/* j'ajoute au header la valeur de mon titre */}
+      <Header pageTitle="HomePage"/>
       <main>
         <section>
           <h2>Les trois derniers produits cuisine : </h2>

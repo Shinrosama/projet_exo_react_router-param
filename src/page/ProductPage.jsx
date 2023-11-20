@@ -22,7 +22,8 @@ function ProductPage() {
 
   return (
     <>
-      <Header />
+    {/* j'ajoute au header la valeur de mon titre */}
+      <Header pageTitle= "ProductPage" />
       <main>
         {productFound ? (
           <article>

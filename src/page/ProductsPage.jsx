@@ -6,7 +6,8 @@ function ProductsPage() {
 
   return (
     <>
-      <Header />
+    {/* j'ajoute au header la valeur de mon titre */}
+      <Header pageTitle= "ProductsPage" />
       <main>
         <h1>Les produits les moins chers pour les grosses pinces : </h1>
 
