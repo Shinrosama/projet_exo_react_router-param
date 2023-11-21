@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Header from "../component/Header";
 import { productSortedByPrice } from "../utils/products-utils";
 import SideBar from "../component/SideBar";
+import ProductCards from "../component/ProductCards";
 
 function ProductsPage() {
 
@@ -15,13 +16,8 @@ function ProductsPage() {
 
         {productSortedByPrice.map((product) => {
           return (
-            <article>
-              <h2>{product.title}</h2>
-              <p>{product.price} euros</p>
-              <Link to={`/products/${product.id}`}>
-                <button>Voir le produit</button>
-              </Link>
-            </article>
+             // Je retourne mon composant ProductCards via la props productToShow
+           <ProductCards productToShow = {product}/>
           );
         })}
       </main>

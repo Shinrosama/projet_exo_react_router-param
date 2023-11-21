@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Header from "../component/Header";
 import { productSortedByPrice, products } from "../utils/products-utils";
 import SideBar from "../component/SideBar";
+import ProductCards from "../component/ProductCards";
 
 function Home() {
  
@@ -61,13 +62,8 @@ function Home() {
           {/* on recommence comme au dessus mais sur le tableau des prix */}
           {cheapestProducts.map((product) => {
             return (
-              <article>
-                <h3>{product.title}</h3>
-                <p>{product.price}</p>
-                <Link to={`/products/${product.id}`}>
-                  <button>Voir le produit</button>
-                </Link>
-              </article>
+              // Je retourne mon composant ProductCards via la props productToShow
+            <ProductCards productToShow = {product}/>
             );
           })}
         </section>

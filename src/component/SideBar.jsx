@@ -1,11 +1,11 @@
 import './SideBar.scss'
 
-function SideBar ({sidebar}) {
+function SideBar ({sidebarText}) {
 
     return(
         
         <div className="sidenav">
-            <p> {sidebar} </p>
+            <p> {sidebarText} </p>
         </div>
     
     )
